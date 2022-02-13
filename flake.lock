@@ -207,6 +207,18 @@
         "type": "github"
       }
     },
+    "primitive-extras": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-HpAcs8ZJPr5NIaPgDRyiquNKZum5lENGf0BKFAfWukc=",
+        "type": "tarball",
+        "url": "https://hackage.haskell.org/package/primitive-extras-0.10.1.2/primitive-extras-0.10.1.2.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://hackage.haskell.org/package/primitive-extras-0.10.1.2/primitive-extras-0.10.1.2.tar.gz"
+      }
+    },
     "retrie": {
       "flake": false,
       "locked": {
@@ -234,6 +246,7 @@
         "lsp-types": "lsp-types",
         "nixpkgs": "nixpkgs",
         "pre-commit-hooks": "pre-commit-hooks",
+        "primitive-extras": "primitive-extras",
         "retrie": "retrie"
       }
     }

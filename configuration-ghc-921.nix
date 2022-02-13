@@ -11,7 +11,7 @@ let
     with pkgs.haskell.lib;
     {
       fourmolu = hself.callCabal2nix "fourmolu" inputs.fourmolu {};
-      primitive-extras = hself.primitive-extras_0_10_1_2;
+      primitive-extras = hself.callCabal2nix "primitive-extras" inputs.primitive-extras {};
       ghc-exactprint = hself.callCabal2nix "ghc-exactprint" inputs.ghc-exactprint {};
       constraints-extras = hself.callCabal2nix "constraints-extras" inputs.constraints-extras {};
       retrie = hself.callCabal2nix "retrie" inputs.retrie {};

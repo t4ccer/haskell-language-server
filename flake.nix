@@ -59,6 +59,10 @@
       url = "https://hackage.haskell.org/package/hie-bios-0.8.0/hie-bios-0.8.0.tar.gz";
       flake = false;
     };
+    primitive-extras = {
+      url = "https://hackage.haskell.org/package/primitive-extras-0.10.1.2/primitive-extras-0.10.1.2.tar.gz";
+      flake = false;
+    };
   };
   outputs =
     inputs@{ self, nixpkgs, flake-compat, flake-utils, pre-commit-hooks, gitignore, ... }:
