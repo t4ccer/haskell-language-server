@@ -55,6 +55,10 @@
       url = "https://hackage.haskell.org/package/hlint-3.3.6/hlint-3.3.6.tar.gz";
       flake = false;
     };
+    hie-bios = {
+      url = "https://hackage.haskell.org/package/hie-bios-0.8.0/hie-bios-0.8.0.tar.gz";
+      flake = false;
+    };
   };
   outputs =
     inputs@{ self, nixpkgs, flake-compat, flake-utils, pre-commit-hooks, gitignore, ... }:
@@ -105,7 +109,7 @@
               # Patches don't apply
               github = overrideCabal hsuper.github (drv: { patches = []; });
               # GHCIDE requires hie-bios >=0.8 && <0.9.0
-              hie-bios = hself.hie-bios_0_8_0;
+              hie-bios = hsuper.callCabal2nix "hie-bios" inputs.hie-bios {};
               # We need an older version
               hiedb = hself.hiedb_0_4_1_0;
 
